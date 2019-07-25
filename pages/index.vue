@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   display: flex;
@@ -44,8 +44,8 @@ export default {
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  font-weight: 500;
+  font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
 }

@@ -1,5 +1,13 @@
 <template>
   <div>
+    <header>
+      <nav class="d-flex flex-column">
+        <div class="text-center title-wrap"><nuxt-link to="/" class="title">HOME PAGE</nuxt-link></div>
+        <div class="d-flex justify-content-center gnb-wrap">
+          <nuxt-link to="/board">게시판</nuxt-link>
+        </div>
+      </nav>
+    </header>
     <nuxt/>
   </div>
 </template>
@@ -48,6 +56,26 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.title {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  display: block;
+  font-weight: 500;
+  font-size: 50px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+header {
+  height: 150px;
+  background-color: #F37970;
+}
+header > nav > .title-wrap {
+  height: 100px;
+}
+header > nav > .gnb-wrap {
+
 }
 </style>
 

@@ -10,7 +10,12 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', id: 'bootstrap-css', href: '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' },
+    ],
+    script: [
+      {'src': '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', defer: true},
+      {'src': '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', defer: true}
     ]
   },
   /*
