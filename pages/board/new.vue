@@ -34,10 +34,10 @@
       back: function() {
         this.$router.push('/board');
       },
-      send: function() {
+      send: async function() {
         // 완료동작action
-       this.$store.dispatch('boardSubmit', this.$data);
-        console.log('완료');
+       await this.$store.dispatch('boardSubmit', this.$data);
+       this.$router.push('/board');
 
       }
     }

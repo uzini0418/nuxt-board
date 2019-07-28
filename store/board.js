@@ -20,18 +20,38 @@ export default {
   getters: {
     boards(state) {
       return state.boardList;
+    },
+    boardOne: (state) => (no) => {
+      return state.boardList.find(board => board.no === parseInt(no));
     }
   },
   mutations: {
+    "BOARD_ADD": (state, board) => {
+      board.no = state.boardList.length+1; // board no 추가
+      state.boardList.push(board);
+    }
   },
   actions: {
-    boardSubmit({commit, state}, payload) {
-      // 사용자 계정 가져옴
-      console.log(payload.user);
-      console.log(payload.title);
-      console.log(payload.content);
+    boardSubmit({commit, state}, data) {
+      // 현재시각 계산
+      let date = new Date();
+      date = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+      // 삽입할 board
+      let board = {
+        "writer": data.user.name,
+        "title": data.title,
+        "content": data.content,
+        "at": date
+      };
+      return new Promise(function (resolve, reject) {
+          setTimeout(function() {
+            commit("BOARD_ADD", board);
+            resolve();
+          }, 2000);
+      });
 
     }
+
 
   }
 }

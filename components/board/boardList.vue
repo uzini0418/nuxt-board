@@ -15,7 +15,7 @@
         <tr v-for="b in boards" :key="b.no">
           <th scope="row">{{ b.no }}</th>
           <td>{{ b.writer }}</td>
-          <td>{{ b.title }}</td>
+          <td><nuxt-link :to="'board/'+b.no">{{ b.title }}</nuxt-link></td>
           <td>{{ b.at }}</td>
         </tr>
         </tbody>
