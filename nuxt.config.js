@@ -18,6 +18,13 @@ module.exports = {
       {'src': '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', defer: true}
     ]
   },
+  /* module */
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  axios: {
+    baseURL: "http://localhost:3000"
+  },
   /*
   ** Customize the progress bar color
   */

@@ -21,15 +21,23 @@
         </tbody>
       </table>
     </div>
+    <div class="row"> <!--axios test-->
+      axios
+    </div>
   </div>
 </template>
 
 <script>
+  import Data from '~/data.json';
   import { mapGetters } from 'vuex';
   export default {
     name: "boardList",
     computed: {
       ...mapGetters(['boards'])
+    },
+    created () {
+      console.log(Data);
+      console.log(this.$axios.$get('/data.json'));
     }
   }
 </script>
