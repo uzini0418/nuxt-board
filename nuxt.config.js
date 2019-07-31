@@ -23,7 +23,7 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   axios: {
-    baseURL: "http://localhost:3000"
+    //baseURL: "http://localhost:3000"
   },
   /*
   ** Customize the progress bar color

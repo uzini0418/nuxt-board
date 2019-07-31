@@ -37,7 +37,7 @@
     },
     created () {
       console.log(Data);
-      console.log(this.$axios.$get('/data.json'));
+      console.log(this.$axios.$get('~static/data.json'));
     }
   }
 </script>

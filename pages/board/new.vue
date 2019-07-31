@@ -36,7 +36,11 @@
       },
       send: async function() {
         // 완료동작action
-       await this.$store.dispatch('boardSubmit', this.$data);
+        console.log('동기');
+        await this.$store.dispatch('boardSubmit', this.$data);
+        console.log('push 완료');
+
+
        this.$router.push('/board');
 
       }
