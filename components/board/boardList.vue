@@ -22,22 +22,22 @@
       </table>
     </div>
     <div class="row"> <!--axios test-->
-      axios
+      {{ news }}
     </div>
   </div>
 </template>
 
 <script>
-  import Data from '~/data.json';
+  import Data from '~/data.js';
   import { mapGetters } from 'vuex';
   export default {
     name: "boardList",
+    props: ['news'],
     computed: {
       ...mapGetters(['boards'])
     },
     created () {
       console.log(Data);
-      console.log(this.$axios.$get('~static/data.json'));
     }
   }
 </script>

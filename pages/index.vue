@@ -19,6 +19,7 @@
           class="button--grey">GitHub</a>
       </div>
     </div>
+    <div>socket test</div>
   </section>
 </template>
 
@@ -28,6 +29,9 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  created() {
+    // console.log(this.$socket);
   }
 }
 </script>

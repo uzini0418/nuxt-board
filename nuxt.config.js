@@ -7,7 +7,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -25,6 +26,7 @@ module.exports = {
   axios: {
     //baseURL: "http://localhost:3000"
   },
+  plugins: [ '~/plugins/socket.js' ],
   /*
   ** Customize the progress bar color
   */
@@ -46,6 +48,10 @@ module.exports = {
         })
       }
     }
-  }
+  },
+
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/index.js' }
+  ]
 }
 
